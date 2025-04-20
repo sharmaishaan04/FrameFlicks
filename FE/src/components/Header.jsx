@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { addUser, removeUser } from "../utils/userSlice";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { LOGO } from "../utils/constants";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -60,11 +61,7 @@ const Header = () => {
   return (
     <div className="w-full bg-gradient-to-b from-black  p-4 absolute z-10 flex justify-between">
       <div className=" flex items-center">
-        <img
-          src="../public/club_logo.png"
-          className="w-30 rounded-[50%]"
-          alt=""
-        />
+        <img src={LOGO} className="w-30 rounded-[50%]" alt="" />
         <span className="text-white text-5xl mx-5">
           <TypewriterEffect
             words={words}
