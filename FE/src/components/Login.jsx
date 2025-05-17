@@ -1,19 +1,3 @@
-// import React from "react";
-// import Header from "./Header";
-
-// const Login = () => {
-//   return (
-//     <div className="relative">
-//       <Header />
-//       <img src="../public/movie.png" class="h-screen w-screen absolute" />
-//       <form>
-//         <input type="text" placeholder="Email Address" />
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Login;
 import { useState, useRef } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";

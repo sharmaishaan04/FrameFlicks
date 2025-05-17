@@ -54,15 +54,19 @@ const Header = () => {
     },
 
     {
-      text: "Flicks.",
+      text: "Flicks",
+      className: "text-red-500 dark:text-gray-500 text-6xl",
+    },
+    {
+      text: ".",
       className: "text-red-500 dark:text-red-500 text-6xl",
     },
   ];
   return (
-    <div className="w-full bg-gradient-to-b from-black  p-4 absolute z-10 flex justify-between">
+    <div className="w-full bg-gradient-to-b from-black absolute z-40 flex justify-between ">
       <div className=" flex items-center">
-        <img src={LOGO} className="w-30 rounded-[50%]" alt="" />
-        <span className="text-white text-5xl mx-5">
+        <img src={LOGO} className="w-25" alt="" />
+        <span className="text-white text-5xl ">
           <TypewriterEffect
             words={words}
             cursorClassName={"bg-white"}
@@ -72,14 +76,17 @@ const Header = () => {
       </div>
 
       {user && (
-        <div className="flex p-2 justify-between">
-          <img
+        <div className="flex justify-between items-center">
+          {/* <img
             className="hidden md:block w-12 h-12"
             alt="usericon"
             src={user?.photoURL}
-          />
-          <button onClick={handleSignOut} className="font-bold text-white ">
-            (Sign Out)
+          /> */}
+          <button
+            onClick={handleSignOut}
+            className="bg-gray-500 text-white w-20 h-10 rounded-md mr-10 p-2 hover:bg-red-500 delay-75 hover:scale-110 hover:delay-75"
+          >
+            Sign Out
           </button>
         </div>
       )}
